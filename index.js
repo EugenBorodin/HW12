@@ -43,7 +43,19 @@ console.log(totalCost);
 // Повысьте цену всех машин в массиве на 20%.
 
 const updatedCars = cars.map(car => {
-    const updatedPrice = car.price * 1.2; // Увеличиваем цену на 20%
-    return { ...car, price: updatedPrice }; // Создаем новый объект с обновленной ценой
+    const updatedPrice = car.price * 1.2;
+    return { ...car, price: updatedPrice };
   });
 console.log(updatedCars);  
+
+// Задание 6
+// Создайте новый массив, где все дизельные машины заменены на { brand: "Tesla", price: 25000, isDiesel: false }
+
+const teslaCars = cars.map(car => {
+    if (car.isDiesel) {
+      return { brand: "Tesla", price: 25000, isDiesel: false };
+    }
+    return car;
+  });
+  console.log(teslaCars);
+  
