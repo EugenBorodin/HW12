@@ -31,3 +31,9 @@ console.log(newCarsDiesel);
 
 const newBenzinCars = cars.filter(car => !car.isDiesel);
 console.log(newBenzinCars);
+
+// Задание 4
+// Посчитайте общую стоимость всех машин не с дизельным двигателем.
+
+const totalCost = newBenzinCars.reduce((accumulator, car) => accumulator + car.price, 0);
+console.log(totalCost);
