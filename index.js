@@ -37,3 +37,13 @@ console.log(newBenzinCars);
 
 const totalCost = newBenzinCars.reduce((accumulator, car) => accumulator + car.price, 0);
 console.log(totalCost);
+
+
+// Задание 5
+// Повысьте цену всех машин в массиве на 20%.
+
+const updatedCars = cars.map(car => {
+    const updatedPrice = car.price * 1.2; // Увеличиваем цену на 20%
+    return { ...car, price: updatedPrice }; // Создаем новый объект с обновленной ценой
+  });
+console.log(updatedCars);  
