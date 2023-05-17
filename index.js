@@ -26,3 +26,8 @@ const newCarsDiesel = cars.filter(car => car.isDiesel);
 console.log(newCarsDiesel);
 
 
+// Задание 3
+// Создайте новый массив, где оставьте только машины не с дизельным двигателем.
+
+const newBenzinCars = cars.filter(car => !car.isDiesel);
+console.log(newBenzinCars);
