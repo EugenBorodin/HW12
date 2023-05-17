@@ -18,3 +18,11 @@ const cars = [
 
 const newCars = cars.map(({ brand, isDiesel }) => ({ brand, isDiesel }));
 console.log(newCars);
+
+//Задание 2
+//Создайте новый массив, где оставьте только машины с дизельным двигателем.
+
+const newCarsDiesel = cars.filter(car => car.isDiesel);
+console.log(newCarsDiesel);
+
+
