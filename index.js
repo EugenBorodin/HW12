@@ -35,18 +35,22 @@ console.log(newBenzinCars);
 // Задание 4
 // Посчитайте общую стоимость всех машин не с дизельным двигателем.
 
-const totalCost = newBenzinCars.reduce((accumulator, car) => accumulator + car.price, 0);
+const totalCost = newBenzinCars.reduce((acc, car) => acc + car.price, 0);
 console.log(totalCost);
 
 
 // Задание 5
 // Повысьте цену всех машин в массиве на 20%.
 
-const updatedCars = cars.map(car => {
-    const updatedPrice = car.price * 1.2;
-    return { ...car, price: updatedPrice };
-  });
-console.log(updatedCars);  
+// const updatedCars = cars.map(car => {
+//     const updatedPrice = car.price * 1.2;
+//     return { ...car, price: updatedPrice };
+//   });
+// console.log(updatedCars);  
+
+cars.forEach((car) => car.price *= 1.2)
+console.log(cars);
+
 
 // Задание 6
 // Создайте новый массив, где все дизельные машины заменены на { brand: "Tesla", price: 25000, isDiesel: false }
